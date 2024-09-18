@@ -43,7 +43,7 @@ const viewTemplate = (
         id={id}
         type="checkbox"
         defaultChecked={stat}
-        onChange={() => toggleTaskCompleted(props.id)}
+        onChange={() => toggleTaskCompleted(id)}
       />
       <label className="todo-label" htmlFor={id}>
         {name}
