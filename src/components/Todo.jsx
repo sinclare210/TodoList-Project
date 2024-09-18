@@ -2,6 +2,7 @@ import React from 'react'
 
 const Todo = ({name,id,stat}) => {
   return (
+    <>
     <li className="todo stack-small">
           <div className="c-cb">
             <input id={id} type="checkbox" defaultChecked={stat} />
@@ -18,7 +19,8 @@ const Todo = ({name,id,stat}) => {
             </button>
           </div>
         </li>
-  )
+        </>
+  );
 }
 
 export default Todo
