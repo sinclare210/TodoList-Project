@@ -10,12 +10,11 @@ const taskList = tasks?.map((task) => <Todo id={task.id} name={task.name} comple
 
   return (
     <>
-    <Form/>
+   
      <div className="todoapp stack-large">
       <h1 className='text-4xl font-extrabold'>Todo-List Project</h1>
       
       <div className="filters btn-group stack-exception">
-        <Form/>
         <Form/>
       </div>
       <h2 id="list-heading">3 tasks remaining</h2>

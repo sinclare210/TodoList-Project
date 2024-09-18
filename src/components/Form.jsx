@@ -3,7 +3,7 @@ import React from 'react'
 const Form = () => {
   return (
     <>
-    <form>
+        <form>
       <h2 className="label-wrapper">
         <label htmlFor="new-todo-input" className="label__lg">
           What needs to be done?
