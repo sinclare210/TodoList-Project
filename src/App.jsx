@@ -4,7 +4,8 @@ import Todo from './components/Todo.jsx'
 
 
 
-function App({subject}) {
+function App({tasks}) {
+const taskList = tasks?.map((task) => <Todo id={task.id} name={task.name} completed = {task.completed} key={task.id}/>);
 
 
   return (
@@ -50,9 +51,10 @@ function App({subject}) {
         role='list'
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading">
-       <Todo/>
-      <Todo/>
-      <Todo/>
+       {/* <Todo name="Eat" id="todo-0" stat="completed"/>
+      <Todo name="Sleep"  id="todo-1"  />
+      <Todo name="Repeat" id="todo-2"/> */}
+      {taskList}
       </ul>
     </div>
     </>
