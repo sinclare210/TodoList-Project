@@ -89,7 +89,7 @@ useEffect(() => {
     <>
    
      <div className="todoapp stack-large">
-      <h1 className='text-4xl font-extrabold'>Todo-List Project</h1>
+      <h1 className='text-4xl font-extrabold'>Sinclair's Todo-List Project</h1>
      
       <div className="filters btn-group stack-exception">
         <Form addTask={addTask}/>
