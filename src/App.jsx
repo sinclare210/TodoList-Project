@@ -8,7 +8,7 @@ function App({subject}) {
   return (
     <>
      <div className="todoapp stack-large">
-      <h1>Todo-List Project</h1>
+      <h1 className='text-4xl font-extrabold'>Todo-List Project</h1>
       <form>
         <h2 className="label-wrapper">
           <label htmlFor="new-todo-input" className="label__lg">
