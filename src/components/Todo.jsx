@@ -1,9 +1,23 @@
 import React from 'react'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
 
 const Todo = ({name,id,stat,toggleTaskCompleted, deleteTask,editTask}) => {
+
     const [isEditing, setEditing] = useState(false);
     const [newName, setNewName] = useState("");
+    const editFieldRef = useRef(null);
+    const editButtonRef = useRef(null);
+    const wasEditing = usePrevious(isEditing);
+
     function handleChange(e) {
         setNewName(e.target.value);   
     }
@@ -22,7 +36,7 @@ const Todo = ({name,id,stat,toggleTaskCompleted, deleteTask,editTask}) => {
       <label className="todo-label" htmlFor={id}>
         New name for {name}
       </label>
-      <input id={id} className="todo-text" type="text" value={newName} onChange={handleChange}/>
+      <input id={id} className="todo-text" type="text" value={newName} onChange={handleChange} ref={editFieldRef}/>
     </div>
     <div className="btn-group">
       <button type="button" className="btn todo-cancel" onClick={() => setEditing(false)}>
@@ -50,7 +64,7 @@ const viewTemplate = (
       </label>
     </div>
     <div className="btn-group">
-      <button type="button" className="btn" onClick={() => setEditing(true)}>
+      <button type="button" className="btn" onClick={() => setEditing(true)} ref={editButtonRef}>
         Edit <span className="visually-hidden">{name}</span>
       </button>
       <button
@@ -62,6 +76,18 @@ const viewTemplate = (
     </div>
   </div>
 );
+  useEffect(() => {
+    if (!wasEditing && isEditing) {
+      editFieldRef.current.focus();
+    } else if (wasEditing && !isEditing) {
+      editButtonRef.current.focus();
+    }
+  }, [wasEditing, isEditing]);
+
+
+console.log("main render");
+
+
   return (
     <>
     <li className="todo stack-small">

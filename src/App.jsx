@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from "react";
 import { nanoid } from 'nanoid';
 import Todo from './components/Todo.jsx'
 import Form from './components/Form.jsx';
@@ -9,6 +9,14 @@ const FILTER_MAP = {
   Completed: (task) => task.completed,
 };
 const FILTER_NAMES = Object.keys(FILTER_MAP);
+function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
+
 
 
 
@@ -64,6 +72,15 @@ function editTask(id,newName){
 
 
 
+const listHeadingRef = useRef(null);
+const prevTaskLength = usePrevious(tasks.length);
+useEffect(() => {
+  if (tasks.length < prevTaskLength) {
+    listHeadingRef.current.focus();
+  }
+}, [tasks.length, prevTaskLength]);
+
+
 
 
 
@@ -81,7 +98,9 @@ function editTask(id,newName){
          <div className="filters btn-group stack-exception">
         {filterList}
       </div>
-      <h2 id="list-heading">{headingText}</h2>
+<h2 id="list-heading" tabIndex="-1" ref={listHeadingRef}>
+  {headingText}
+</h2>
       <ul
         role='list'
         className="todo-list stack-large stack-exception"
