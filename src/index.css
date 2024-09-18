@@ -102,9 +102,9 @@ body {
   border-color: lightgrey;
 }
 .btn__primary {
-  background-color: #ca3c3c;
-    border-color: #bd2130; 
-    color: #fff;
+  background-color: #000;
+ 
+  color: #fff;
 }
 .btn-group {
   display: flex;
