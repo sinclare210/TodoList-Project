@@ -1,7 +1,7 @@
 
-# Frontend Mentor - Easybank landing page solution
+#  Todo-list Project Using React.js
 
-This is a solution to the [Easybank landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a todo-list project built using react.js and tailwind.css.
 
 ## Table of contents
 
