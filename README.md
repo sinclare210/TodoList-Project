@@ -48,35 +48,31 @@ Users should be able to:
 
 ### Built with
 
-- Semantic HTML5 markup
+- Jsx
 - Tailwind CSS
-- Flexbox
-- CSS Grid
-- Mobile-first workflow
+- React
+
 
 
 
 ### What I learned
 
-This project, was built using tailwind css, i learnt about grid-cols, this tailwind property helps you control the number of card you want to see on a row depending on the screen size.
-
-Secondly, i learnt about javascript dom, because it was used to build the mobile navbar.
+I learnt about usestate which is use to hold information, like a virtual storage, till the data is refreshed. I also learnt about props which is use to pass information from one component to another,
 
 
 ### Continued development
 
-I need to work on Tailwind css postioning, it was the main issue on the project. It was tiresome.
+I would need o build more project with react to solidify my knowledge with usestate.
 
 
 
 ### Useful resources
 
-- [Card Creation](https://v1.tailwindcss.com/components/cards) - This resource help me in creating a card in tailwind css.
+- [Leant about React, usestate,useeffect](With the help of this resources: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning build a React TODO list) 
 
 
 ## Author
 
-- Frontend Mentor - [@sinclare210](https://www.frontendmentor.io/profile/sinclare210)
 - Twitter - [@Sincla1Olajuwon](https://x.com/Sincla1Olajuwon?t=9Rl_pnqS5YlDRBy-PVlhWQ&s=09)
 
 
