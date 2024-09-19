@@ -68,7 +68,7 @@ I would need o build more project with react to solidify my knowledge with usest
 
 ### Useful resources
 
-- [Leant about React, usestate,useeffect](With the help of this resources: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning build a React TODO list) 
+- [Leant about React, usestate,useeffect](With the help of this resources: https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning) 
 
 
 ## Author
